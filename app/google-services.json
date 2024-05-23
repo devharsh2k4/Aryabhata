@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "479926475853",
+    "project_id": "aryabhata-3bf6b",
+    "storage_bucket": "aryabhata-3bf6b.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:479926475853:android:dee2537d691e5dcd64d004",
+        "android_client_info": {
+          "package_name": "com.example.hackathoncheckin"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDsk2-RASx7ZnyztqfGFiApvYa1quyHwfA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
