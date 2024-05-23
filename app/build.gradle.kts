@@ -78,4 +78,15 @@ dependencies {
     implementation("com.google.firebase:firebase-auth")
     implementation("com.google.firebase:firebase-firestore")
 
+    // Activity Compose
+    implementation ("androidx.activity:activity-compose:1.4.0")
+
+    // CameraX
+    implementation ("androidx.camera:camera-camera2:1.0.2")
+    implementation ("androidx.camera:camera-lifecycle:1.0.2")
+    implementation ("androidx.camera:camera-view:1.0.0-alpha31")
+
+    // Zxing
+    implementation ("com.google.zxing:core:3.3.3")
+
 }
