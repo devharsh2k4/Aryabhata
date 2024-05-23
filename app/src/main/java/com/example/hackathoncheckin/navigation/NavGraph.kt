@@ -21,79 +21,87 @@ fun SetupNavGraph(navController: NavHostController = rememberNavController()) {
 
     NavHost(
         navController = navController,
-        startDestination = Screen.Home.route
+        startDestination = Screen.Participant.route
     ) {
-        navigation(
-            startDestination = Screen.Home.route,
-            route = Screen.Home.route
-        ) {
-            composable(route = Screen.Home.route) {
-                val viewModel =
-                    it.sharedViewModel<NavigationViewModel>(navController = navController)
-                HomeScreen(
+        composable(route = Screen.Participant.route) {
+            val viewModel =
+                it.sharedViewModel<NavigationViewModel>(navController = navController)
+            ParticipantScreen(
 
-                    onNavigateToScreen = {
-                        navController.navigate(Screen.Scan.route){
-                            popUpTo(Screen.Home.route){
-                                inclusive = true
-                            }
-                        }
-                    }
+            )
+        }
 
-                )
-            }
+//        navigation(
+//            startDestination = Screen.Participant.route,
+//            route = Screen.Participant.route
+//        ) {
+//
+//        }
+    }
 
-            navigation(
-                startDestination = Screen.Scan.route,
-                route = Screen.Scan.route
-            ) {
-                composable(route = Screen.Scan.route) {
-                    val viewModel =
-                        it.sharedViewModel<NavigationViewModel>(navController = navController)
-                    ScanScreen(
 
-                    )
-                }
-            }
 
-            navigation(
-                startDestination = Screen.Participant.route,
-                route = Screen.Participant.route
-            ) {
-                composable(route = Screen.Participant.route) {
-                    val viewModel =
-                        it.sharedViewModel<NavigationViewModel>(navController = navController)
-                    ParticipantScreen(
+//
+//        navigation(
+//            startDestination = Screen.Home.route,
+//            route = Screen.Home.route
+//        ) {
+//            composable(route = Screen.Home.route) {
+//                val viewModel =
+//                    it.sharedViewModel<NavigationViewModel>(navController = navController)
+//                HomeScreen(
+//
+//                    onNavigateToScreen = {
+//                        navController.navigate(Screen.Scan.route){
+//                            popUpTo(Screen.Home.route){
+//                                inclusive = true
+//                            }
+//                        }
+//                    }
+//
+//                )
+//            }
 
-                    )
-                }
-            }
+//            navigation(
+//                startDestination = Screen.Scan.route,
+////                route = Screen.Scan.route
+//            ) {
+//                composable(route = Screen.Scan.route) {
+//                    val viewModel =
+//                        it.sharedViewModel<NavigationViewModel>(navController = navController)
+//                    ScanScreen(
+//
+//                    )
+//                }
+//            }
 
-            navigation(
-                startDestination = Screen.Search.route,
-                route = Screen.Search.route
-            ) {
-                composable(route = Screen.Search.route) {
-                    val viewModel =
-                        it.sharedViewModel<NavigationViewModel>(navController = navController)
-                    SearchScreen()
-                }
-            }
 
-            navigation(
-                startDestination = Screen.Settings.route,
-                route = Screen.Settings.route
-            ) {
-                composable(route = Screen.Settings.route) {
-                    val viewModel =
-                        it.sharedViewModel<NavigationViewModel>(navController = navController)
-                    SettingsScreen()
-                }
-            }
+
+//            navigation(
+//                startDestination = Screen.Search.route,
+//                route = Screen.Search.route
+//            ) {
+//                composable(route = Screen.Search.route) {
+//                    val viewModel =
+//                        it.sharedViewModel<NavigationViewModel>(navController = navController)
+//                    SearchScreen()
+//                }
+//            }
+
+//            navigation(
+//                startDestination = Screen.Settings.route,
+//                route = Screen.Settings.route
+//            ) {
+//                composable(route = Screen.Settings.route) {
+//                    val viewModel =
+//                        it.sharedViewModel<NavigationViewModel>(navController = navController)
+//                    SettingsScreen()
+//                }
+//            }
 
         }
-    }
-}
+
+
 
 @Composable
 inline fun <reified T : ViewModel> NavBackStackEntry
